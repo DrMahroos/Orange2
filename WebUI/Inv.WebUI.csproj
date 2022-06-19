@@ -412,6 +412,7 @@
     <Content Include="Newtemplate\template\assets\js\codeEditor.js" />
     <Content Include="Newtemplate\template\assets\js\codemirror.js" />
     <Content Include="Newtemplate\template\assets\js\context-menu.js" />
+    <Content Include="Newtemplate\template\assets\js\counter.js" />
     <Content Include="Newtemplate\template\assets\js\cropper.js" />
     <Content Include="Newtemplate\template\assets\js\dashboard.js" />
     <Content Include="Newtemplate\template\assets\js\data-table.js" />
