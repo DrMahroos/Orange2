@@ -3,7 +3,7 @@
     ViewBag.Title = @SystemResource.Purchase_Recieve;
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-<style>
+@*<style>
     .margin_right_30 {
         margin-right: -12px;
     }
@@ -104,7 +104,7 @@
     input[type=checkbox], input[type=radio] {
         margin: 14% 0 0 !important;
     }
-</style>
+</style>*@
 <script>
     $(document).ready(function () {
 
@@ -136,12 +136,12 @@
         });
     });
 </script>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12 p-0 borderred">
+@*<div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12 p-0 borderred">
     <div id="DivFilter" class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12 p-0">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12">
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  marginstenig pading_lep  pading_2  "> @SystemResource.I_Vendor</label>
             <div class="col-lg-3 col-md-2 col-sm-2 col-xl-2 col-xs-2 ">
-                <select id="ddlVendorMaster" name="" class="form-control input-sm"></select>
+                <select id="ddlVendorMaster" name="" class="form-control input-control"></select>
             </div>
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  marginstenig pading_lep  pading_2 textcentr_PurOrder">@SystemResource.App_FromDate</label>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2  ">
@@ -149,7 +149,7 @@
             </div>
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1 marginstenig pading_lep  pading_2 textcentr_PurOrder ">@SystemResource.App_ToDate</label>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2 ">
-                <input type="date" class="form-control input-sm  addable editable" name="GosiJoinDate" id="txtToDate">
+                <input type="date" class="form-control input-control  addable editable" name="GosiJoinDate" id="txtToDate">
             </div>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2 p-0">
                 <button id="btnadd" type="button" class="btn btn-success">
@@ -162,15 +162,15 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12">
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1 marginstenig pading_lep pading_2">@SystemResource.Men_AccDefSalesmen</label>
             <div class="col-lg-3 col-md-2 col-sm-2 col-xl-2 col-xs-2 ">
-                <select id="ddlSalesmanMaster" name="" class="form-control input-sm"></select>
+                <select id="ddlSalesmanMaster" name="" class="form-control input-control"></select>
             </div>
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1 marginstenig pading_lep pading_2 textcentr_PurOrder">@SystemResource.cash_type</label>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2  ">
-                <select id="ddlcashType" name="" class="form-control input-sm"></select>
+                <select id="ddlcashType" name="" class="form-control input-control"></select>
             </div>
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1 marginstenig pading_lep pading_2 textcentr_PurOrder">@SystemResource.App_State</label>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2">
-                <select id="ddlStateType" name="" class="form-control input-sm"></select>
+                <select id="ddlStateType" name="" class="form-control input-control"></select>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2 p-0">
                 <div class="btn-group float-left floatleftPurOrder " style="left: 2%;">
@@ -197,7 +197,7 @@
     </div>
     <div id="divMasterGridiv" class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12  display_none ">
         <div class="col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3" style="margin-bottom: 4px;margin-right: 27px;margin-top: 9px;">
-            <input id="txtSearchBox" name="" type="text" class="form-control input-sm  text_Display" placeholder="@SystemResource.Search ">
+            <input id="txtSearchBox" name="" type="text" class="form-control input-control  text_Display" placeholder="@SystemResource.Search ">
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12 ">
             <table id="divMasterGrid"></table>
@@ -233,35 +233,35 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12">
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1   marginstenig pading_lep pading_2 ">  @SystemResource.Pur_TRNO  </label>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2">
-                <input type="text" class="form-control input-sm   " name="" id="txtPurTrNo" disabled="disabled" style="font-size: 16px !important;">
+                <input type="text" class="form-control input-control   " name="" id="txtPurTrNo" disabled="disabled" style="font-size: 16px !important;">
             </div>
             <div class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1">
             </div>
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  marginstenig pading_lep  pading_2  ">@SystemResource.App_date</label>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2">
-                <input type="date" class="form-control input-sm" name="" id="txtDateHeader" disabled="disabled" style="font-size: 16px !important;">
+                <input type="date" class="form-control input-control" name="" id="txtDateHeader" disabled="disabled" style="font-size: 16px !important;">
             </div>
 
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  marginstenig pading_lep  pading_2 textcentr_PurOrder2 ">@SystemResource.Trns_RefNum</label>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2">
-                <input type="text" class="form-control input-sm" name="" id="txtRefNum" disabled="disabled" style="font-size: 16px !important;">
+                <input type="text" class="form-control input-control" name="" id="txtRefNum" disabled="disabled" style="font-size: 16px !important;">
             </div>
         </div>
         <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12" id="">
 
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1 marginstenig pading_lep  pading_2  ">  @SystemResource.I_Vendor</label>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3">
-                <select id="ddlVendorHeader" name="" disabled="disabled" class="form-control input-sm"></select>
+                <select id="ddlVendorHeader" name="" disabled="disabled" class="form-control input-control"></select>
             </div>
 
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1 marginstenig pading_lep  pading_2  textcentr_PurOrder2">   @SystemResource.Pur_PaymentType</label>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2">
-                <select id="ddlIsCash" name="" disabled="disabled" class="form-control input-sm"></select>
+                <select id="ddlIsCash" name="" disabled="disabled" class="form-control input-control"></select>
             </div>
 
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1 marginstenig pading_lep  pading_2  textcentr_PurOrder2">   @SystemResource.Currency</label>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2">
-                <select id="ddlCurrency" name="" disabled="disabled" class="form-control input-sm"></select>
+                <select id="ddlCurrency" name="" disabled="disabled" class="form-control input-control"></select>
             </div>
             <label class="col-lg-1 col-md-6 col-sm-6 col-xl-6 col-xs-6 marginstenig pading_lep  pading_2 textcentr_PurOrder text-left">  @SystemResource.Isrecieved  </label>
             <div class="col-lg-1 col-md-6 col-sm-6 col-xl-6 col-xs-6">
@@ -271,11 +271,11 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12" id="">
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1 marginstenig pading_lep  pading_2 ">@SystemResource.App_Salesman</label>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xl-3 col-xs-3 ">
-                <select id="ddlSalesmanHeader" name="" disabled="disabled" class="form-control input-sm"></select>
+                <select id="ddlSalesmanHeader" name="" disabled="disabled" class="form-control input-control"></select>
             </div>
             <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  marginstenig pading_lep  pading_2 textcentr_PurOrder2"> @SystemResource.App_TaxType </label>
             <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2">
-                <select id="ddlTaxTypeHeader" name="" disabled="disabled" class="form-control input-sm"></select>
+                <select id="ddlTaxTypeHeader" name="" disabled="disabled" class="form-control input-control"></select>
             </div>
         </div>
         <div id="" class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12 border_gridCont" style="overflow:auto ;">
@@ -318,13 +318,13 @@
                 </div>
                 <label class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1  marginstenig pading_lep  pading_2  margin_right_30  "> @SystemResource.I_Total  </label>
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1">
-                    <input type="text" class="form-control input-sm" name="" id="txtTotal" disabled="disabled">
+                    <input type="text" class="form-control input-control" name="" id="txtTotal" disabled="disabled">
                 </div>
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1">
-                    <input type="text" class="form-control input-sm" name="" id="txtVatTotal" disabled="disabled">
+                    <input type="text" class="form-control input-control" name="" id="txtVatTotal" disabled="disabled">
                 </div>
                 <div class="col-lg-1 col-md-1 col-sm-1 col-xl-1 col-xs-1">
-                    <input type="text" class="form-control input-sm" name="" id="txtNetTotal" disabled="disabled">
+                    <input type="text" class="form-control input-control" name="" id="txtNetTotal" disabled="disabled">
                 </div>
             </div>
             <div id="" class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12 container-fluid margingred ">
@@ -332,25 +332,25 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12">
                     <label class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2  marginstenig pading_lep  pading_remark  ">@SystemResource.Pur_ExpirePeriod</label>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2 ">
-                        <input type="text" class="form-control input-sm" name="" id="txtValidityPeriod" disabled="disabled" style="font-size: 16px !important;">
+                        <input type="text" class="form-control input-control" name="" id="txtValidityPeriod" disabled="disabled" style="font-size: 16px !important;">
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12">
                     <label class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2  marginstenig pading_lep  pading_remark ">@SystemResource.Pur_Termsofsupply</label>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xl-10 col-xs-10">
-                        <textarea type="text" class="form-control input-sm" name="" id="txtDliveryConditions" disabled="disabled" style="font-size: 16px !important;"></textarea>
+                        <textarea type="text" class="form-control input-control" name="" id="txtDliveryConditions" disabled="disabled" style="font-size: 16px !important;"></textarea>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12">
                     <label class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2  marginstenig pading_lep  pading_remark ">@SystemResource.Pur_Shippingterms</label>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xl-10 col-xs-10">
-                        <textarea type="text" class="form-control input-sm" name="" id="txtShipmentConditions" disabled="disabled" style="font-size: 16px !important;"></textarea>
+                        <textarea type="text" class="form-control input-control" name="" id="txtShipmentConditions" disabled="disabled" style="font-size: 16px !important;"></textarea>
                     </div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 col-xs-12">
                     <label class="col-lg-2 col-md-2 col-sm-2 col-xl-2 col-xs-2  marginstenig pading_lep  pading_remark ">@SystemResource.App_Notes</label>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xl-10 col-xs-10">
-                        <textarea type="text" class="form-control input-sm" name="" id="txtNotes" disabled="disabled" style="font-size: 16px !important;"></textarea>
+                        <textarea type="text" class="form-control input-control" name="" id="txtNotes" disabled="disabled" style="font-size: 16px !important;"></textarea>
                     </div>
                 </div>
             </div>
@@ -365,7 +365,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
 
 @*<script src="~/New/vendor/jquery/jquery.min.js"></script>
     <script src="~/New/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>*@

@@ -236,6 +236,7 @@
     <Content Include="Newtemplate\documentation\script.js" />
     <Content Include="Newtemplate\documentation\style.css" />
     <Content Include="Newtemplate\preview.jpg" />
+    <Content Include="Newtemplate\template\assets\css\style_arabic.css" />
     <Content Include="Newtemplate\template\assets\css\style.css" />
     <Content Include="Newtemplate\template\assets\images\auth\lockscreen-bg.jpg" />
     <Content Include="Newtemplate\template\assets\images\auth\login-bg.jpg" />

@@ -307,7 +307,6 @@ var AdminComp;
             { title: "اسم الفرع", name: "NameA", type: "text", width: "12%" },
             { title: "رقم الموبيل", name: "Tel", type: "text", width: "20%" },
             { title: "الحالة", name: "NameActive", type: "text", width: "20%" },
-            //  { title: "الحالة", name: COMPANY[0].IsActive == true ? "تم" : "لا" , type: "text", width: "20%" },
         ];
         BindGrid();
     }

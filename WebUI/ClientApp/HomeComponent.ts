@@ -153,13 +153,13 @@ namespace HomeComponent {
         Language();
         if (SysSession.CurrentEnvironment.ScreenLanguage == "ar")
         {
-            $("#camp_name").val(SysSession.CurrentEnvironment.CompanyNameAr);
+            $("#camp_name").text(SysSession.CurrentEnvironment.CompanyNameAr + " - " + SysSession.CurrentEnvironment.CurrentYear);
 
            // document.getElementById('camp_name').innerHTML = SysSession.CurrentEnvironment.CompanyNameAr + " - " + SysSession.CurrentEnvironment.CurrentYear;
         }
         else {
             document.getElementById('camp_name').innerHTML = SysSession.CurrentEnvironment.CompanyName + " - " + SysSession.CurrentEnvironment.CurrentYear;
-            $("#camp_name").val(SysSession.CurrentEnvironment.CompanyNameAr);
+            $("#camp_name").text(SysSession.CurrentEnvironment.CompanyNameAr + " - " + SysSession.CurrentEnvironment.CurrentYear);
 
         }
          
