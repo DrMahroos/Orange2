@@ -28878,12 +28878,11 @@ div.tagsinput {
         width: 40px;
         height: 40px;
         border: 1px solid var(--main-blue);
-        color: var(--main-blue);
+        color: var(--dark-blue);
     }
 
         .inside-table .counter:focus {
-            background-color: var(--main-blue);
-            color: var(--Lighter-blue);
+            background-color: var(--Light-blue);
         }
     .inside-table .value-button {
         display: inline-block;
@@ -28932,11 +28931,20 @@ div.tagsinput {
     font-size: 0.85rem;
     padding-left: 0;
 }
-
+/*Date input*/
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(0);
     font-size: 1rem;
+}
+/*Number input*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
 }
 .special-field{
     border: .5px solid var(--main-orange);
