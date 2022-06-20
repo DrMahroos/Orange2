@@ -28000,7 +28000,7 @@ div.tagsinput {
 .sidebar .nav .nav-item .nav-link .menu-title {
     color: inherit;
     display: inline-block;
-    font-size: 0.9375rem;
+    font-size: 1rem;
     line-height: 1;
     vertical-align: middle;
 }
@@ -28260,7 +28260,7 @@ div.tagsinput {
             color: var(--bs-gray-light);
             padding: 0.5rem 0.35rem;
             position: relative;
-            font-size: 0.855rem;
+            font-size: .9rem;
             line-height: 1;
             height: auto;
             border-top: 0;
@@ -28910,7 +28910,7 @@ div.tagsinput {
     .inside-table .counter {
         background-color: transparent;
         text-align: center;
-        margin: 0px;
+        margin: 5px;
         width: 40px;
         height: 40px;
         border: .5px solid var(--main-blue);
@@ -28923,7 +28923,7 @@ div.tagsinput {
     .inside-table .value-button {
         display: inline-block;
         border: none;
-        margin: -5px;
+        margin: 0px 18px;
         width: 19px;
         height: 40px;
         text-align: center;
@@ -28944,10 +28944,9 @@ div.tagsinput {
 }
 
     .inside-table .decrease-button {
-        margin-right: -12px;
+        margin-right: -66px;
         border-radius: 0 8px 8px 0;
         background-color: darkred;
-     
     }
 
     .inside-table .increase-button {
@@ -28998,7 +28997,6 @@ select.form-control[disabled] {
     -webkit-appearance: none;
     -moz-appearance: none;
 }
-.counter[disabled] ~ .value-button{
+.counter[disabled] ~ .value-button {
     display: none;
 }
-
