@@ -13042,6 +13042,17 @@ fieldset:disabled .swal2-modal .swal2-buttonswrapper .swal2-styled,
         background-color: var(--dark-blue);
         border-color: var(--dark-blue);
     }
+.btn-gray {
+    color: var(--bs-light);
+    background-color: var(--bs-gray);
+    border-color: var(--bs-gray);
+}
+
+    .btn-gray:hover {
+        color: var(--Lighter-blue);
+        background-color: var(--bs-gray-dark);
+        border-color: var(--bs-gray-dark);
+    }
 .fade {
     transition: opacity 0.15s linear;
 }
@@ -23659,7 +23670,7 @@ code {
 
 /* Forms */
 .form-group {
-    margin-bottom: .4rem;
+    margin-bottom: .1rem;
 }
 
 .input-group-append,
@@ -23681,11 +23692,11 @@ code {
 .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .select2-container--default .select2-selection--single, .select2-container--default .select2-selection--single .select2-search__field, .typeahead,
 .tt-query,
 .tt-hint {
-    border: .5px solid var(--dark-blue);
+    border: .5px solid var(--main-blue);
     height: calc(2.25rem + 2px);
     font-weight: normal;
-    font-size: 0.875rem;
-    padding: 0.625rem 0.6875rem;
+    font-size: 1rem;
+    padding: 0.25rem 0.6875rem;
     background-color: transparent;
     border-radius: 5px;
     color: var(--dark-blue);
@@ -23743,10 +23754,11 @@ code {
     .jsgrid .jsgrid-table .jsgrid-filter-row select, .select2-container--default select.select2-selection--single, .select2-container--default .select2-selection--single select.select2-search__field, select.typeahead,
     select.tt-query,
     select.tt-hint {
-        padding: .4375rem .75rem;
+        padding: .25rem .75rem;
+        font-size:1rem;
         border: 0;
         color: var(--dark-blue);
-        border: 2px solid var(--dark-blue);
+        border: .5px solid var(--main-blue);
         -webkit-appearance: button;
         -moz-appearance: button;
         appearance: button;
@@ -27840,7 +27852,6 @@ div.tagsinput {
 }
 
 /* Sidebar */
-/*Nahla*/
 .sidebar {
     min-height: calc(100vh - 70px);
     background: var(--main-blue);
@@ -27853,7 +27864,6 @@ div.tagsinput {
     -moz-transition: width 0.25s ease, background 0.25s ease;
     -ms-transition: width 0.25s ease, background 0.25s ease;
 }
-/*Nahla*/
     .sidebar .sidebar-brand-wrapper {
         transition: width 0.25s ease, background 0.25s ease;
         -webkit-transition: width 0.25s ease, background 0.25s ease;
@@ -27869,7 +27879,6 @@ div.tagsinput {
         width: 55px;
     }
 }
-/*Nahla*/
 .sidebar .sidebar-brand-wrapper .sidebar-brand {
     color: var(--main-orange);
     font-size: 2.5rem;
@@ -27879,7 +27888,6 @@ div.tagsinput {
     width: 100%;
     font-family: 'Dancing Script', cursive;
 }
-/*Nahla*/
     .sidebar .sidebar-brand-wrapper .sidebar-brand:active, .sidebar .sidebar-brand-wrapper .sidebar-brand:focus, .sidebar .sidebar-brand-wrapper .sidebar-brand:hover {
         color: var(--bs-light);
     }
@@ -28628,11 +28636,6 @@ div.tagsinput {
     flex-grow: 1;
 }
 /*============Custom Style=============*/
-
-::-webkit-calendar-picker-indicator {
-    filter: invert(1);
-}
-
 /* styling sidebar */
 .side-iconbar .icon-bar {
     background-color: var(--main-blue);
@@ -28773,76 +28776,107 @@ div.tagsinput {
         width: 20%;
     }
 /* ==  Checkbox ==*/
-.checkbox-container {
-    width: 50%;
+.switchToggle input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    position: absolute;
 }
 
-    .checkbox-container .checkbox-input {
+.switchToggle label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 200px;
+    max-width: 200px;
+    height: calc(2.25rem + 2px);
+    background: var(--bs-gray);
+    display: block;
+    border-radius: 5px;
+    position: relative;
+}
+
+    .switchToggle label:after {
+        content: '';
         position: absolute;
-        display: none;
-    }
-
-    .checkbox-container .checkbox-label {
-        display: block;
-        position: relative;
-        padding: 8px 30px 8px 62px;
+        top: 3px;
+        left: 3px;
+        width: 30px;
+        height: 30px;
+        background: var(--bs-gray-lighter);
         border-radius: 5px;
-        color: #fff;
-        background-color: var(--bs-gray);
-        box-shadow: 0 0 20px rgba(0, 0, 0, .2);
-        white-space: nowrap;
-        cursor: pointer;
-        user-select: none;
-        transition: background-color .2s, box-shadow .2s;
+        transition: 0.3s;
     }
-
-        .checkbox-container .checkbox-label::before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 8px;
-            bottom: 10px;
-            left: 10px;
-            width: 22px;
-            height: 22px;
-            background-color: var(--bs-gray-light);
-            border-radius: 50%;
-            transition: background-color .2s;
-        }
-
-
-        .checkbox-container .checkbox-label:hover,
-        .checkbox-container .checkbox-input:focus + label {
-            box-shadow: 0 0 20px rgba(0, 0, 0, .6);
-        }
-
-.checkbox-container input:checked + label {
-    background-color: var(--main-blue);
+.switchToggle .checkbox-input:checked + label:after {
+    background: var(--main-orange);
+}
+.switchToggle .checkbox-input:checked + label,
+.switchToggle .checkbox-input:checked + .checkbox-input + label {
+    background: var(--main-blue);
 }
 
-.checkbox-container input:checked + label::before {
-    background-color: var(--main-orange);
+.switchToggle .checkbox-input + label:before,
+.switchToggle .checkbox-input + .checkbox-input + label:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 35px;
+    width: 80%;
+    height: 26px;
+    border-radius: 90px;
+    transition: 0.3s;
+    text-indent: 0;
+    color: #fff;
 }
-    .checkbox-container .checkbox-input[disabled] + label {
-        cursor: no-drop;
-    }
 
-    .checkbox-container .checkbox-input.certified:not(:checked) + label::after {
-        content: 'غير معتمد';
-    }
+.switchToggle .checkbox-input:checked + label:before,
+.switchToggle .checkbox-input:checked + .checkbox-input + label:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    width: 80%;
+    height: 26px;
+    border-radius: 90px;
+    transition: 0.3s;
+    text-indent: 0;
+    color: var(--bs-light);
+}
+.switchToggle .checkbox-input.certified + label:before,
+.switchToggle .checkbox-input.certified + .checkbox-input + label:before {
+    content: 'غير معتمد';
+}
 
-    .checkbox-container .checkbox-input.certified:checked + label::after {
-        content: "معتمد";
-    }
+.switchToggle .checkbox-input.certified:checked + label:before,
+.switchToggle .checkbox-input.certified:checked + .checkbox-input + label:before {
+    content: 'معتمد';
+}
 
+.switchToggle .checkbox-input.active + label:before,
+.switchToggle .checkbox-input.active + .checkbox-input + label:before {
+    content: 'غير نشط';
+}
 
-    .checkbox-container .checkbox-input.active:not(:checked) + label::after {
-        content: 'غير نشط';
-    }
+.switchToggle .checkbox-input.active:checked + label:before,
+.switchToggle .checkbox-input.active:checked + .checkbox-input + label:before {
+    content: 'نشط';
+}
+.switchToggle .checkbox-input:checked + label:after,
+.switchToggle .checkbox-input:checked + .checkbox-input + label:after {
+    left: calc(100% - 2px);
+    transform: translateX(-100%);
+}
 
-    .checkbox-container .checkbox-input.active:checked + label::after {
-        content: "نشط";
-    }
+.switchToggle label:active:after {
+    width: 60px;
+}
+
+.toggle-switchArea {
+    margin: 10px 0 10px 0;
+}
+.checkbox-input[disabled] + label {
+    cursor: no-drop;
+}
+
 /*inside-table*/
 .inside-table {
     padding: 0;
@@ -28862,6 +28896,8 @@ div.tagsinput {
     .inside-table thead tr th {
         font-size: 0.75rem;
         text-align: center;
+        color: var(--main-blue);
+
     }
   
     .inside-table .form-control {
@@ -28877,7 +28913,7 @@ div.tagsinput {
         margin: 0px;
         width: 40px;
         height: 40px;
-        border: 1px solid var(--main-blue);
+        border: .5px solid var(--main-blue);
         color: var(--dark-blue);
     }
 
@@ -28888,7 +28924,7 @@ div.tagsinput {
         display: inline-block;
         border: none;
         margin: -5px;
-        width: 20px;
+        width: 19px;
         height: 40px;
         text-align: center;
         vertical-align: middle;
@@ -28949,3 +28985,20 @@ input[type=number] {
 .special-field{
     border: .5px solid var(--main-orange);
 }
+
+/*Disabled Style*/
+.form-control[disabled],
+.counter[disabled] {
+    border: none;
+    background-color: transparent;
+    font-size: .99rem;
+}
+
+select.form-control[disabled] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.counter[disabled] ~ .value-button{
+    display: none;
+}
+

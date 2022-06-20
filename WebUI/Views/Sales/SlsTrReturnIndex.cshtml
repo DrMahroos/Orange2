@@ -173,7 +173,6 @@
                                 <th style="width: 20%">مندوب</th>
                                 <th style="width: 20%">طريقه الدفع</th>
                                 <th style="width: 15%">الحاله</th>
-
                             </tr>
                         </thead>
                         <tbody>
@@ -224,9 +223,7 @@
                 <div class="row">
                     <div class="col-12 service-content">
                         <div class="serviceBox mt-5">
-                            <div class="d-flex justify-content-end mb-5">
-                                <a class="btn btn-danger"><i class="fas fa-times m-0"></i></a>
-                            </div>
+                           
                             <div class="row">
                                 <div class="col-12 col-md-4">
                                     <div class="form-group row">
@@ -240,27 +237,28 @@
                                     <div class="form-group row">
                                         <label class="col-4 align-self-center">العميل</label>
                                         <div class="col-8 ">
-                                            <select class="form-control" id="">
+                                            <select class="form-control" id="" >
                                                 <option>اختيار 1</option>
                                                 <option>اختيار 2</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-md-4">
-                                    <div class="d-flex justify-content-end ">
-                                        <div class="checkbox-container">
-                                            <input class="checkbox-input certified" id="check1" type="checkbox" checked>
-                                            <label class="checkbox-label" for="check1"></label>
-                                        </div>
-                                    </div>
+                               
+                               <div class="col-12 col-md-4">
+                                   <div class="d-flex justify-content-end ">
+                                       <div class="switchToggle">
+                                           <input class="checkbox-input certified" type="checkbox" id="switch" >
+                                           <label for="switch"></label>
+                                       </div>
 
+                                   </div>
                                 </div>
                                 <div class="col-12 col-md-4">
                                     <div class="form-group row">
                                         <label class="col-4 align-self-center">نوع المرتجع</label>
                                         <div class="col-8 ">
-                                            <select class="form-control" id="">
+                                            <select class="form-control"  id="">
                                                 <option>اختيار 1</option>
                                                 <option>اختيار 2</option>
                                             </select>
@@ -389,7 +387,7 @@
                                                     </th>
                                                     <th>
                                                         <div class="form-group">
-                                                            <select class="form-control" id="">
+                                                            <select class="form-control" id="" >
                                                                 <option>قصب سكر</option>
                                                                 <option>اختيار 1</option>
                                                                 <option>اختيار 2</option>
@@ -414,7 +412,7 @@
                                                     <th>
                                                         <div class="form-group ps-1">
                                                             <div class="value-button decrease-button" id="decrease">-</div>
-                                                            <input class="counter" type="number" data-id="number" id="" value="0" min="0" />
+                                                            <input class="counter" type="number" data-id="number" id="" value="0" min="0" disabled/>
                                                             <div class="value-button increase-button" id="increase">+</div>
                                                         </div>
                                                 
